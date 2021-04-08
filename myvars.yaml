@@ -25,6 +25,8 @@ my_packages:
   - remmina
   - rsync
   - slack
+  - SpiderOakGroups
+  - spotify
   - sshuttle
   - terminator
   - thunderbird
