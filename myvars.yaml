@@ -15,10 +15,12 @@ my_packages:
   - jq
   - keepassxc
   - kcli
+  - kdenlive
   - krb5-auth-dialog
   - krb5-workstation
   - nmap
   - nmap-ncat
+  - obs-studio
   - openvpn
   - powerline
   - powertop
@@ -43,7 +45,6 @@ my_packages:
   - xz
 
 removed_packages:
-  - gnome-terminal
   - evolution
   - gnome-boxes
   - gnome-calendar
