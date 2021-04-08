@@ -1,36 +1,27 @@
 ---
 # Repo
-- name: Install Rpmfusion Free repos
-  dnf:
-    name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm
-    state: present
-  become: true
+- name: Slack repository
+  yum_repository:
+    name: slack
+    description: Slack repository
+    baseurl: https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64
+    gpgcheck: no
+    gpgkey: https://packagecloud.io/gpg.key
+    sslverify: yes
+    sslcacert: /etc/pki/tls/certs/ca-bundle.crt
 
-- name: Install Rpmfusion NonFree repos
-  dnf:
-    name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm
-    state: present
-  become: true
-
-- name: Enable fedora-cisco-openh264 repository
-  ini_file:
-    path: /etc/yum.repos.d/fedora-cisco-openh264.repo
-    section: fedora-cisco-openh264
-    option: enabled
-    value: "1"
-  become: true
-
-- name: Install Adobe repos
-  dnf:
-    name: http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-    state: present
-  become: true
-
-- name: Enable eminguez repo
-  command: dnf copr enable -y eminguez/eminguez-RPMs
-  become: true
-  args:
-    creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:eminguez:eminguez-RPMs.repo
+- name: Spotify repository
+  yum_repository:
+    name: "negativo17 - Spotify"
+    description: "Spotify Repository"
+    baseurl: https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/
+    gpgcheck: yes
+    enabled: yes
+    skip_if_unavailable: yes
+    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+    enabled_metadata: yes
+    metadata_expire: 21600
+    repo_gpgcheck: no
 
 - name: Enable kcli repo
   command: dnf copr enable -y karmab/kcli
@@ -38,14 +29,25 @@
   args:
     creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:karmab:kcli.repo
 
-- name: Enable flat-remix repo
-  command: dnf copr enable -y daniruiz/flat-remix
-  become: true
-  args:
-    creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:daniruiz:flat-remix.repo
+- name: Visual Studio Code
+  yum_repository:
+    name: vscode
+    description: Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    enabled: true
+    gpgcheck: true
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 
-- name: Enable tripledes repo
-  command: dnf copr enable -y tripledes/fedora-rpms
+- name: SpiderOak packages
+  yum_repository:
+    name: spideroak
+    description: SpiderOak packages
+    baseurl: https://hdn.corp.redhat.com/software/spideroak/repo/
+    enabled: true
+    gpgcheck: true
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-helpdesk-new
+    skip_if_unavailable: true
+
+- name: Enable Docker CE
+  command: dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
   become: true
-  args:
-    creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:tripledes:fedora-rpms.repo

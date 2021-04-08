@@ -1,127 +1,44 @@
 ---
 ansible_python_interpreter: auto
 my_packages:
-  - alien
-  - alsa-plugins-pulseaudio
-  - android-tools
   - ansible
-  - bind-utils
-  - blueberry
-  - calibre
-  - cheese
-  - cool-retro-term
-  - corkscrew
-  - darktable
-  - dconf-editor
-  - deluge
-  - deluge-gtk
+  - docker
   - dos2unix
   - dosfstools
+  - dstat
   - ffmpeg
-  - filezilla
-  - firefox
-  - flac-libs
-  - flash-plugin
-  - flat-remix
-  - flat-remix-gtk
-  - flat-remix-gnome
-  - gconf-editor
   - gedit
-  - geteltorito
-  - gftp
-  - gimp
   - git
-  - gitk
-  - gnome-bluetooth
-  - gnome-rdp
-  - gnome-screenshot
-  - gnome-shell-extension-common
-  - gnome-shell-extension-gpaste
-  - gnome-system-monitor
-  - gnome-tweak-tool
-  - golang
   - gparted
-  - gpaste
-  - gstreamer1-plugin-openh264
-  - gtk-murrine-engine
-  - gtk-unico-engine
-  - guestfs-browser
-  - inkscape
+  - htop
   - iotop
-  - java-1.8.0-openjdk
   - jq
   - keepassxc
-  - kernel-devel
   - kcli
   - krb5-auth-dialog
   - krb5-workstation
-  - kubernetes-client
-  - libcurl
-  - libguestfs-tools
-  - libreoffice-calc
-  - libreoffice-draw
-  - libreoffice-gtk3
-  - libreoffice-impress
-  - libreoffice-langpack-en
-  - libreoffice-langpack-es
-  - libreoffice-writer
-  - libvirt
-  - libvirt-client
-  - libvirt-daemon
-  - lm_sensors
-  - meld
-  - ModemManager
-  - mosh
-  - mozilla-openh264
-  - nextcloud-client-nautilus
   - nmap
   - nmap-ncat
-  - ntfsprogs
-  - numix-icon-theme
-  - numix-icon-theme-circle
-  - numix-gtk-theme
   - openvpn
-  - openssh-askpass
-  - p7zip
-  - p7zip-plugins
-  - pavucontrol
-  - pcaro-hermit-fonts
-  - pigz
   - powerline
   - powertop
-  - privoxy
-  - qemu-img
-  - qemu-kvm
-  - rdesktop
-  - rpmrebuild
-  - ruby-devel
+  - remmina
   - rsync
-  - samba
-  - samba-client
-  - screen
-  - smplayer-themes
-  - sshpass
+  - slack
   - sshuttle
-  - strace
-  - subversion
-  - synergy
-  - ShellCheck
   - terminator
-  - tigervnc
+  - thunderbird
+  - tmux
   - traceroute
-  - transmission-gtk
   - tree
   - tuned
   - unrar
   - unzip
-  - upower
   - virt-install
   - virt-manager
   - vlc
   - wget
-  - wireshark
   - xz
-#  - https://github.com/ramboxapp/community-edition/releases/download/0.6.9/Rambox-0.6.9-linux-x86_64.rpm
 
 removed_packages:
   - gnome-terminal
@@ -139,17 +56,17 @@ removed_packages:
   - httpd
   - hyperv-daemons
 
-my_extensions:
-  - "358"
-  - "1176"
-  - "517"
-  - "964"
-  - "28"
-  - "1276"
-  - "906"
-  - "355"
-  - "1031"
-  - "19"
-  - "302"
-
-openweathercities: "40.4933095,-3.8758396>Las Rozas>-1 && 40.656478,-4.7002172>Ávila>-1"
+#my_extensions:
+#  - "358"
+#  - "1176"
+#  - "517"
+#  - "964"
+#  - "28"
+#  - "1276"
+#  - "906"
+#  - "355"
+#  - "1031"
+#  - "19"
+#  - "302"
+#
+#openweathercities: "40.4933095,-3.8758396>Las Rozas>-1 && 40.656478,-4.7002172>Ávila>-1"
