@@ -35,5 +35,3 @@
     dest: "{{ item.dest }}"
   with_items:
     - { src: '.bashrc', dest: '{{ ansible_user_dir }}/.bashrc' }
-    - { src: '.bash_logout', dest: '{{ ansible_user_dir }}/.bash_logout' }
-    - { src: '.bash_profile', dest: '{{ ansible_user_dir }}/.bash_profile' }

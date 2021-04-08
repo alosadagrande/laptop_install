@@ -38,6 +38,8 @@ my_packages:
   - tuned
   - unrar
   - unzip
+  - vim
+  - vim-powerline
   - virt-install
   - virt-manager
   - vlc
