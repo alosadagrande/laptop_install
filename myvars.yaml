@@ -1,6 +1,7 @@
 ---
 ansible_python_interpreter: auto
 my_packages:
+  - "@Virtualization"
   - ansible
   - docker
   - dos2unix
@@ -18,6 +19,7 @@ my_packages:
   - kdenlive
   - krb5-auth-dialog
   - krb5-workstation
+  - libvirt-client
   - nmap
   - nmap-ncat
   - obs-studio
