@@ -1,8 +1,10 @@
 ---
+# allowerasing to true so vim replaces nano as default editor
 - name: install packages
   dnf:
     name: "{{ my_packages }}"
     state: present
+    allowerasing: true
   notify: yum-clean-metadata
   become: true
 

@@ -42,6 +42,7 @@ my_packages:
   - unrar
   - unzip
   - vim
+  - vim-default-editor
   - vim-powerline
   - virt-install
   - virt-manager
