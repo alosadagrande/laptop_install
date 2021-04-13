@@ -10,7 +10,7 @@ Based on Fedora 33
 ./get_release.sh
 ```
 
-> I assume you know how to copy the ISO to a USB pendrive. If you are already running Fedora, you can use the Fedora Media Writer who may also download the ISO file you select to copy on the USB.
+> :warning: I assume you know how to copy the ISO to a USB pendrive. If you are already running Fedora, you can use the Fedora Media Writer who may also download the ISO file you select to copy on the USB.
 
 ## Process
 
