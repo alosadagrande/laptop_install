@@ -4,15 +4,11 @@
   gather_facts: yes
   roles:
     - repos
-    - atom
-    - bluejeans
-    - chrome
-    - firefox
-    - golang
-    - msttcorefonts
-    - multimedia
+    #- golang
+    #- msttcorefonts
+    #- multimedia
     - packages
-    - misc
-    - gsettings
+    #- misc
+    #- gsettings
     - dotfiles
-    - scripts
+    #- scripts

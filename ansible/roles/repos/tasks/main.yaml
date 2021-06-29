@@ -7,34 +7,36 @@
   dnf:
     name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm
     state: present
+    disable_gpg_check: yes
   become: true
 
 - name: Install Rpmfusion NonFree repos
   dnf:
     name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm
     state: present
+    disable_gpg_check: yes
   become: true
 
-- name: Slack repository
-  yum_repository:
-    name: slack
-    description: Slack repository
-    baseurl: https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64
-    gpgcheck: no
-    gpgkey: https://packagecloud.io/gpg.key
-    sslverify: yes
-    sslcacert: /etc/pki/tls/certs/ca-bundle.crt
-
-- name: Spotify repository
-  yum_repository:
-    name: fedora-spotify
-    description: "Spotify Repository"
-    baseurl: https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/
-    gpgcheck: yes
-    enabled: yes
-    skip_if_unavailable: yes
-    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
-    repo_gpgcheck: no
+#- name: Slack repository
+#  yum_repository:
+#    name: slack
+#    description: Slack repository
+#    baseurl: https://packagecloud.io/slacktechnologies/slack/fedora/21/x86_64
+#    gpgcheck: no
+#    gpgkey: https://packagecloud.io/gpg.key
+#    sslverify: yes
+#    sslcacert: /etc/pki/tls/certs/ca-bundle.crt
+#
+#- name: Spotify repository
+#  yum_repository:
+#    name: fedora-spotify
+#    description: "Spotify Repository"
+#    baseurl: https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/
+#    gpgcheck: yes
+#    enabled: yes
+#    skip_if_unavailable: yes
+#    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+#    repo_gpgcheck: no
 
 - name: Enable kcli repo
   command: dnf copr enable -y karmab/kcli
@@ -42,25 +44,25 @@
   args:
     creates: /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:karmab:kcli.repo
 
-- name: Visual Studio Code
-  yum_repository:
-    name: vscode
-    description: Visual Studio Code
-    baseurl: https://packages.microsoft.com/yumrepos/vscode
-    enabled: true
-    gpgcheck: true
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-
-- name: SpiderOak packages
-  yum_repository:
-    name: spideroak
-    description: SpiderOak packages
-    baseurl: https://hdn.corp.redhat.com/software/spideroak/repo/
-    enabled: yes 
-    gpgcheck: no
-    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-helpdesk-new
-    skip_if_unavailable: true
-
+#- name: Visual Studio Code
+#  yum_repository:
+#    name: vscode
+#    description: Visual Studio Code
+#    baseurl: https://packages.microsoft.com/yumrepos/vscode
+#    enabled: true
+#    gpgcheck: true
+#    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+#
+#- name: SpiderOak packages
+#  yum_repository:
+#    name: spideroak
+#    description: SpiderOak packages
+#    baseurl: https://hdn.corp.redhat.com/software/spideroak/repo/
+#    enabled: yes 
+#    gpgcheck: no
+#    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-helpdesk-new
+#    skip_if_unavailable: true
+#
 #- name: Enable Docker CE
 #  command: dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 #  become: true

@@ -1,5 +1,5 @@
 ---
-ansible_python_interpreter: auto
+ansible_python_interpreter: /usr/bin/python3 
 my_packages:
   - "@Virtualization"
   - ansible
@@ -35,6 +35,8 @@ my_packages:
   - virt-manager
   - wget
   - xz
+  - podman
+  - bash-completion
 
 removed_packages:
   - evolution

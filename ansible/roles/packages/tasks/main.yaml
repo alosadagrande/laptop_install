@@ -4,7 +4,6 @@
   dnf:
     name: "{{ my_packages }}"
     state: present
-    allowerasing: true
   notify: yum-clean-metadata
   become: true
 
