@@ -3,50 +3,36 @@ ansible_python_interpreter: auto
 my_packages:
   - "@Virtualization"
   - ansible
-  - docker
   - dos2unix
   - dosfstools
   - dstat
-  - ffmpeg
-  - gedit
   - git
   - gparted
   - htop
   - iotop
   - jq
-  - keepassxc
   - kcli
-  - kdenlive
   - krb5-auth-dialog
   - krb5-workstation
   - libvirt-client
   - nmap
   - nmap-ncat
-  - obs-studio
   - openvpn
   - powerline
   - powertop
   - remmina
   - rsync
-  - slack
-  - SpiderOakGroups
-  - spotify
   - sshuttle
-  - telegram-desktop
-  - terminator
-  - thunderbird
   - tmux
   - traceroute
   - tree
   - tuned
-  - unrar
   - unzip
   - vim
   - vim-default-editor
   - vim-powerline
   - virt-install
   - virt-manager
-  - vlc
   - wget
   - xz
 
@@ -77,5 +63,3 @@ removed_packages:
 #  - "1031"
 #  - "19"
 #  - "302"
-#
-#openweathercities: "40.4933095,-3.8758396>Las Rozas>-1 && 40.656478,-4.7002172>Ávila>-1"

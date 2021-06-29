@@ -2,7 +2,7 @@
 
 Here you can find the playbooks I use when reinstalling my laptop. This repository is based on the work done by @e-minguez [laptop_install](https://github.com/e-minguez/laptop_install). Although, I removed a lot of stuff from there. Probably you should take a look to his repository if you want to know more about what you can automatically do when setting up your new computer.
 
-Based on Fedora 33
+Based on Fedora 34
 
 ## Getting the OS
 
@@ -26,6 +26,7 @@ Or:
 $ sudo dnf install -y ansible git dnf-plugins-core libselinux-python
 $ mkdir -p ~/git
 $ git clone https://github.com/alosadagrande/laptop_install.git ~/git/laptop_install
+$ git checkout supermicro
 $ cd ~/git/laptop_install
 ```
 

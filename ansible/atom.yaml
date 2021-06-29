@@ -1,6 +1,0 @@
----
-- name: atom
-  hosts: localhost
-  gather_facts: yes
-  roles:
-    - atom

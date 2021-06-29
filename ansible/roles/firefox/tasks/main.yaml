@@ -1,7 +1,0 @@
----
-# Firefox
-- name: Install Chrome-gnome-shell
-  dnf:
-    name: chrome-gnome-shell
-    state: present
-  become: true
